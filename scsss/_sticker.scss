@@ -1,0 +1,341 @@
+.sticker {
+    position: absolute;
+    z-index: 105;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    transition: opacity 0.5s;
+    opacity: 0;
+    
+ 
+    // &:hover {
+    //     transform: scale(1.02);
+    // }
+    
+    &.loaded {
+        opacity: 1;    
+    }
+
+    &:active { 
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+
+    &__clock {
+        top: 14vw;
+        width: 10%;
+        left: 10%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        
+        @include tablet {
+            top: 27vh;
+            width: 13%;
+            left: 17%;
+        }
+        
+        @include tablet-landscape {
+            top: 35vh;
+            width: 12.5%;
+            left: 35%;
+        }
+        
+        @include phone-landscape {
+            top: 24vh;
+            left: 2%;
+            width: 10%;
+        }
+        
+        @include x-landscape {
+            top: 34vh;
+            left: 15%;
+        }
+    }
+    
+    &__racs {
+        top: 0;
+        width: 25%;
+        right: 15%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 6vh;
+            width: 30%;
+            right: 55%;
+        }
+        
+        @include tablet-landscape {
+            top: 2vh;
+            right: 10%;
+            width: 27.5%;
+        }
+        
+    }
+    
+    &__each {
+        top: 20vw;
+        width: 10%;
+        left: 55%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 37vh;
+            width: 13%;
+            left: 45%;
+        }
+        
+        @include tablet-landscape {
+            top: 47vh;
+            width: 12.5%;
+            left: 65%;
+        }
+        
+        @include phone-landscape {
+            top: 35vh;
+            width: 10%;
+            left: 55%;
+        }
+        
+        @include x-landscape {
+            top: 50vh;
+            width: 10%;
+            left: 75%;
+        }
+    }
+    
+    &__building {
+        top: 18vw;
+        width: 10%;
+        left: 25%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 40vh;
+            width: 12%;
+            left: 10%;
+        }
+        
+        @include tablet-landscape {
+            top: 50vh;
+            width: 12.5%;
+            left: 45%;
+        }
+        
+        @include phone-landscape {
+            top: 27vh;
+            width: 10%;
+            left: 30%;
+        }
+        
+        @include x-landscape {
+            top: 45vh;
+            width: 10%;
+            left: 50%;
+        }
+    }
+    
+    &__tower {
+        top: 32vw;
+        width: 25%;
+        left: 5%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 52vh;
+            width: 33%;
+        }
+        
+        @include tablet-landscape {
+            top: 72vh;
+            width: 33%;
+        }
+        
+        @include phone-landscape {
+            top: 55vh;
+            width: 25%;
+            left: 2%;
+        }
+        
+        @include x-landscape {
+            top: 74vh;
+            left: 5%;
+        }
+    }
+    
+    &__2018 {
+        top: 43vw;
+        width: 15%;
+        left: 80%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 82vh;
+            width: 15%;
+            left: 30%;
+        }
+        
+        @include tablet-landscape {
+            top: 99vh;
+            width: 17.5%;
+            left: 80%;
+        }
+        
+        @include phone-landscape {
+            top: 80vh;
+            width: 15%;
+            left: 50%;
+        }
+        
+        @include x-landscape {
+            top: 100vh;
+            width: 15%;
+            left: 80%;
+        }
+    }
+    
+    &__th {
+        top: 39vw;
+        width: 10%;
+        left: 44%;
+        
+        @include phone {
+            display: none;
+        }
+        
+        @include x {
+            display: none;
+        }
+        
+        @include tablet {
+            top: 70vh;
+            width: 13%;
+            left: 70%;
+        }
+        @include tablet-landscape {
+            top: 97vh;
+            width: 12.5%;
+            right: 40%;
+        }
+        @include phone-landscape {
+            top: 70vh;
+            width: 10%;
+            left: 40%;
+        }
+        
+        @include x-landscape {
+            top: 94vh;
+            left: 50%;
+        }
+    }
+    
+    &__phone {
+        display: none;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 200;
+        overflow: hidden;
+        
+        .sticker {
+            display: block;
+        }
+        
+        @include phone {
+            display: block;
+        }
+        
+        @include x {
+            display: block;
+        }
+        
+        .sticker__racs {
+            width: 110%;
+            left: -8%;
+        }
+        
+        .sticker__2018 {
+            left: -5%;
+            width: 55%;
+            top: 50vh;
+        }
+        
+        .sticker__tower {
+            width: 110%;
+            top: 38vh;
+            left: -3%;
+        }
+        
+        .sticker__clock {
+            width: 50%;
+            top: -2%;
+            left: -2%;
+        }
+        
+        .sticker__each {
+            width: 55%;
+            left: 50%;
+            top: 17vh;
+        }
+        
+        .sticker__th {
+            width: 55%;
+            top: 22vh;
+            left: 0;
+        }
+        
+        .sticker__building {
+            width: 45%;
+            top: 53vh;
+            left: 58%;
+        }
+    }
+    
+    
+}

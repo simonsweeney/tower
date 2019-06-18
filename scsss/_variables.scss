@@ -1,0 +1,27 @@
+$margin: 40px;
+
+$grey: #d0d0ce;
+$blue: #0047e1;
+$pink: #ff7587;
+
+
+
+body {
+    
+    .bg {
+        background-color: white;
+        position: relative;
+        z-index: 5;
+        transition: background-color 0.5s;
+    }
+    
+    &.body--history .bg {
+        background-color: $grey;
+    }
+    &.body--brochure .bg {
+        background-color: white;
+    }
+    &.body--area .bg {
+        background-color: white;
+    }
+}

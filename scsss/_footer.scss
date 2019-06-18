@@ -1,0 +1,118 @@
+.footer {
+    background-color: $blue;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    z-index: 1;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-font-smoothing: antialiased;
+
+    @include phone {
+        padding-bottom: 10vh;    
+        font-size: 1rem;
+    }
+    
+    @include tablet {
+        padding-bottom: 80px;    
+    }
+
+    @include phone-landscape {
+        min-height: 100%;
+        padding-bottom: $margin;
+    }
+
+    @include phone5 {
+        font-size: 0.85rem;
+    }
+    
+    &__wrap {
+        width: 50%;
+        padding: $margin*2 $margin;
+        overflow: auto;
+        
+        @include phone {
+            width: 100%;
+            padding: $margin*2 $margin/2 $margin $margin/2;
+        }
+        
+        @include tablet {
+            width: 100%;
+            padding: $margin*2 $margin/2 $margin $margin/2;
+        }
+        
+        @include tablet-landscape {
+            width: 75%;
+            padding: $margin*2 $margin;
+        }
+        
+        @include phone-landscape {
+            width: 100%;
+            padding: $margin/2 $margin/2 $margin/2 $margin/2;
+        }
+    }
+    
+    &__column {
+        width: 33%;
+        float: left;
+        
+        @include phone {
+            width: 50%;
+
+            &:last-of-type {
+                margin-top: 2em;
+                width: 100%;
+
+                div {
+                    width: 50%;
+                    float: left;
+                }
+            }
+        }
+        
+        
+    }
+    
+    // a {
+    //     border-bottom: 1px solid white;
+        
+    //     &:hover {
+    //         border-bottom: 0;
+    //     }
+    // }
+    
+    &__sticker {
+        position: absolute;
+        right: 5%;
+        top: 45%;
+        
+        @include phone {
+            top: 80%;
+            right: -15%;
+            img {
+                width: 50%;
+            }
+        }
+        
+        @include tablet {
+            top: 70%;
+            right: 5%;
+            text-align: right;
+            
+            img {
+                width: 60%;
+            }
+        }
+        
+        @include phone-landscape {
+            top: 70%;
+            right: 5%;
+            text-align: right;
+            
+            img {
+                width: 50%;
+            }
+        }
+    }
+}

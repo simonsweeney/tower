@@ -1,0 +1,62 @@
+.history {
+    font-size: 4.5vw;
+    line-height: 1.05;
+    font-weight: bold;
+    min-height: calc(100vh - 80px);
+    letter-spacing: -0.05em;
+    z-index: 1;
+    width: 100vw;
+
+    
+    // @include desktop-m-h {
+    //     font-size: 4.75vw;
+    // }
+    
+    // @include desktop-l-h {
+    //     font-size: 5.25vw;
+    // }
+
+
+    @include phone {
+        padding-top: 78vh;
+        font-size: 9.5vw;
+        min-height: calc(100vh - 130px);
+    }
+    
+    
+
+    @include tablet {
+        font-size: 7vw;    
+        min-height: calc(100vh - 90px);
+    }
+
+    @include tablet-landscape {
+        font-size: 6vw;
+    }
+    
+    @include phone-landscape {
+        font-size: 4.5vw;
+    }
+    
+    
+    p {
+        opacity: 0;
+        padding: $margin $margin*2 0 $margin;
+        transition: opacity 2s;
+        
+        &.loaded {
+            opacity: 1;
+        }
+        
+        @include phone {
+            padding: $margin/2 $margin/2 0 $margin/2;
+        }
+        
+        @include tablet {
+            padding: $margin/2 $margin/2 0 $margin/2;
+        }
+    }
+
+    
+    
+}

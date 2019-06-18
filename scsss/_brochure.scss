@@ -1,0 +1,140 @@
+.brochure {
+    overflow: auto;
+    text-align: center;
+    padding: 8em 0;
+    z-index: 10;
+    
+    @include phone {
+        padding: 4em 0;    
+    }
+     
+    @include phone5 {
+        font-size: 0.85em;
+    }
+    
+    &__button {
+        margin: 0 auto;
+        display: block;
+        border: 1px solid black;
+        padding: 14px 0 10px 0;
+        width: 25%;
+        
+        &:hover {
+            color: white;
+            background: black;
+        }
+        
+        @include phone {
+            width: 70%;
+        }
+        
+        @include tablet {
+            width: 50%;
+        }
+    }
+    
+    &__icon {
+        position: relative;
+        width: 25%;
+        margin-left: 37.5%;
+        height: 32.5vw;
+        margin-bottom: 2em;
+        
+        @include phone {
+            width: 50%;
+            margin-left: 25%;
+            height: 65vw;
+
+        }
+
+        
+        @include tablet {
+            width: 50%;
+            margin-left: 25%;
+            height: 65vw;
+        }
+        
+        
+        @include phone-landscape {
+            width: 25%;
+            margin-left: 37.5%;
+            height: 32.5vw;
+        }
+        
+        &--top,
+        &--bottom {
+            position: absolute;
+            width: 98%;
+            height: 98%;
+        }
+        
+        &--top {
+            background-image: url("cover.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: transform 0.5s;
+            
+            &:hover {
+                transform: translate(-5px, -5px);
+            }
+            
+            &--banner {
+                background: $blue;
+                height: 15%;
+            }
+        }
+        
+        &--bottom {
+            margin-top: 2%;
+            margin-left: 2%;
+            background: grey;
+        }
+    }
+    
+    &__text {
+        width: 50%;
+        max-width: 671px;
+        margin: 4em auto 0 auto;
+        text-align: left;
+        line-height: 1.5;
+        
+        @include phone {
+            width: 100%;
+            margin-left: 0;
+            padding: $margin/2;
+            margin-top: 2em;
+        }
+        
+        @include phone-landscape {
+            margin-top: 2em;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        @include tablet {
+            width: 75%;
+            margin-left: 12.5%;
+            padding: $margin/2;
+        }
+        
+    }
+    
+    &__left {
+        margin-right: 5%;    
+        
+        @include phone {
+            margin-right: 0;
+        }
+    }
+    
+    &__left, 
+    &__right {
+        float: left;
+        width: 47.5%;
+        
+        @include phone {
+            float: none;
+            width: 100%;
+        }
+    }
+}

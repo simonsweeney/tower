@@ -1,0 +1,79 @@
+.header {
+    width: 100%;
+    pointer-events: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: auto;
+    padding: 20px $margin $margin $margin;
+ 
+    @include phone5 {
+        font-size: 0.85em;
+    }
+    
+    @include phone {
+        padding: $margin/2 $margin/2 $margin/2 $margin/2;    
+    }
+    
+    @include tablet {
+        padding: $margin/2 $margin/2 $margin $margin/2;    
+    }
+    
+    &__left {
+        float: left;
+        width: 75%;
+        
+        @include phone {
+            width: 100%;
+        }
+        
+        li {
+            pointer-events: visible;
+            position: relative;
+            z-index: 110;
+            display: inline-block;
+            margin-right: 3%;
+
+            
+            &.active {
+                a {
+                    border-bottom: 1px solid black;
+                }
+            }
+            
+            &:hover {
+                
+                @include desktop {
+                    a {
+                        border-bottom: 1px solid black;
+                    }
+                }
+                
+            }
+  
+            @include phone {
+                display: inline-block;
+                text-align: center;
+                width: 24%;
+                margin-right: 0;
+                
+                &:first-of-type {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    &__right {
+        float: right;
+        border: 1px solid black;
+        padding: 8px 12px 5px 12px;
+        margin-top: -5px;
+        
+        &:hover {
+            color: $grey;
+            background-color: black;
+        }
+    }
+}

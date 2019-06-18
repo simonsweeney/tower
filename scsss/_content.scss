@@ -1,0 +1,25 @@
+// .content {
+//     width: 100%;
+//     position: absolute;
+//     z-index: 100;
+//     pointer-events: none;
+    
+//     &__wrap {
+//         background-color: white;
+//     }
+    
+//     &__spacer {
+//         height: 350px;  
+        
+//         @include phone {
+//             display: block;
+//             height: 100vh;
+//         }
+        
+//         @include tablet {
+//             display: block;
+//             height: 50vh;
+//         }
+//     }
+
+// }

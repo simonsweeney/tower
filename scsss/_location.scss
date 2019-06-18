@@ -1,0 +1,118 @@
+.location {
+    height: 84vw;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-image: url('map.svg');
+    background-position: 35% 10%;
+    color: $blue;
+    z-index: 10;
+    margin-bottom: 380px;
+    pointer-events: none;
+    
+    @include phone {
+        background-size: 400%;
+        background-position: 40% 0%;
+        height: 120vh;
+        margin-bottom: 80vh;
+    }
+
+    @include tablet {
+        background-size: 275%;
+        background-position: 35% 30%;
+        height: 100vh;
+        margin-bottom: 42.5vh;    
+    }
+    
+    @include tablet-landscape {
+        background-size: 200%;
+        background-position: 35% 20%;
+    }
+
+    @include phone-landscape {
+        height: 200vh;
+        margin-bottom: 100vw;
+    }
+        
+    
+    &__arrow {
+        margin-bottom: 10px;
+        @include phone {
+            width: $margin;
+        }  
+        
+        @include tablet {
+            width: $margin/2;
+        }   
+    }
+    
+    &__key {
+        width: 30%;
+        margin-left: $margin;
+        padding-top: $margin + $margin/2;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10px;
+        
+        @include phone {
+            margin-left: $margin/2; 
+            padding-top: $margin/2;
+            top: $margin;
+            font-size: 12px;
+            width: 60%;
+        }
+        
+        @include tablet {
+            margin-left: $margin/2; 
+            padding-top: $margin/2;
+            top: $margin;
+            font-size: 14px;
+            width: 40%;
+        }
+        
+        &--left,
+        &--right {
+            width: 35%;
+            display: inline-block;
+        }
+        
+        &--left {
+            padding-right: 10px;
+        }
+        
+    }
+    
+    &__north {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 85%;
+        margin-left: $margin;
+        padding-top: $margin/2;
+        padding-bottom: $margin/2;
+        
+        img {
+            width: $margin/1.75;
+        }
+        
+        @include phone {
+            display: none;
+            bottom: $margin/2;
+            margin-left: $margin/2;
+            img {
+                width: $margin/2;
+            }
+        }
+        
+        @include phone-landscape {
+            display: none;
+        }
+        
+        @include tablet {
+            bottom: $margin/2;
+            margin-left: $margin/2;
+            img {
+                width: $margin/2;
+            }
+        }
+    }
+    
+}
